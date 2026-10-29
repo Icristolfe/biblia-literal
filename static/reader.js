@@ -17,7 +17,7 @@ function render(){
 }
 function verseMarkup(verse){
  const literal=textOf(verse)||verse.literal||"Texto indisponível nesta tradução.";
- if(state.version==="OWB-L")return tokenInterlinearMarkup(verse);
+ if(state.version==="OWB-L")return (verse.interlinearGroups?.length?`<span class="literal-full-text">${esc(canonicalLiteral(verse))}</span>`:"")+tokenInterlinearMarkup(verse);
  return `<span class="verse-text">${esc(literal)}</span>`;
 }
 function displayPronunciation(value){return String(value||'').trim().split(/\s+/u).map(word=>word.replace(/\./g,'').toLocaleLowerCase('pt-BR')).join(' ')}function canonicalLiteral(verse){const groups=verse.interlinearGroups||[];return (groups.length?groups.map(group=>String(group.literalText||'').replace(/[\[\]]/g,'')).join(' '):String(verse.literal||'')).replace(/[\[\]]/g,'').replace(/\s+/g,' ').trim()}function tokenInterlinearMarkup(verse){const groups=verse.interlinearGroups||[],direction='ltr';if(!groups.length)return '<span class="verse-interlinear" dir="'+direction+'"><span class="pronunciation-unit"><span class="literal-phrase">'+esc(canonicalLiteral(verse)||'Tradução literal indisponível neste versículo.')+'</span></span></span>';const body=groups.map(group=>'<span class="pronunciation-unit" dir="ltr"><span class="pronunciation-text" dir="ltr">'+esc(displayPronunciation(group.pronunciation))+'</span><span class="pronunciation-bracket" aria-hidden="true"></span><span class="literal-phrase" dir="ltr">'+esc(group.literalText||'')+'</span></span>').join('');return '<span class="verse-interlinear" dir="'+direction+'">'+body+'</span>'}function esc(s){return String(s).replace(/[\[\]]/g,'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function detail(n){
