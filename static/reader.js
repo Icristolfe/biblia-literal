@@ -34,7 +34,7 @@ function alignLiteralWithPronunciation(literal,original,language){
    const phrase=literalWords.slice(ts,Math.max(ts+1,te)).join(" ");
    return `<span class="pronunciation-unit"><span class="pronunciation-text">${esc(pronunciation)}</span><span class="pronunciation-bracket" aria-hidden="true"></span><span class="literal-phrase">${esc(phrase)}</span></span>`;
  }).join("");
-}function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function detail(n){
+}function esc(s){return String(s).replace(/[\[\]]/g,'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function detail(n){
  document.querySelectorAll('.detail').forEach(e=>e.remove());
  const verse=currentVerses().find(v=>v.n===n),button=document.querySelector(`[data-verse="${n}"]`);
  if(!verse||!button)return;
