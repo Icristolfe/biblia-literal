@@ -42,7 +42,7 @@ function alignLiteralWithPronunciation(literal,original,language){
  const references=`<section class="detail-section"><h4>Referências</h4><div class="reference-list">${referenceItems||'<span class="no-references">Sem referências para este versículo.</span>'}</div></section>`;
  const body=state.version==='OWB-L'
   ?references
-  :`<section class="detail-section"><h4>Tradução literal · pronúncia aproximada</h4><p class="pronunciation-legend">A chave liga cada pronúncia à frase correspondente.</p><div class="verse-interlinear detail-interlinear">${alignLiteralWithPronunciation(verse.literal||'Tradução literal indisponível para este versículo.',verse.original?.text||'',verse.original?.language||'')}</div></section>${references}`;
+  :`<section class="detail-section"><h4>Tradução literal · pronúncia aproximada</h4><div class="verse-interlinear detail-interlinear">${alignLiteralWithPronunciation(verse.literal||'Tradução literal indisponível para este versículo.',verse.original?.text||'',verse.original?.language||'')}</div></section>${references}`;
  button.insertAdjacentHTML('afterend',`<div class="detail verse-detail" data-verse="${n}"><div class="detail-title">${bookMeta(state.book)[1]} ${state.chapter}:${n}</div>${body}</div>`);
  button.classList.add('selected');
 }

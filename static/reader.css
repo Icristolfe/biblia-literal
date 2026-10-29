@@ -74,5 +74,3 @@ html,body{background:#000;color:#f1f1f1}
 .reference-chip{display:inline-flex;align-items:center;min-height:30px;padding:5px 10px;border:1px solid #344b68;border-radius:18px;background:#101c2b;color:#c5d8f2;font:12px/1.4 system-ui,sans-serif}
 .no-references{color:#aaa;font:13px/1.5 system-ui,sans-serif}
 @media(max-width:600px){.detail.verse-detail{margin:4px 4px 14px;padding:13px}.detail-interlinear{gap:6px 5px}.detail-interlinear .pronunciation-unit{flex-basis:95px;min-width:78px;padding:6px 4px}}
-
-.pronunciation-legend{margin:0 0 9px;color:#aaa;font:12px/1.45 system-ui,sans-serif}
