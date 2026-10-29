@@ -23,7 +23,8 @@ Na tradução literal, a pronúncia aproximada do texto original aparece agrupad
 - **Leitura responsiva:** experiência adaptada para celular, tablet e computador.
 - **Navegação bíblica:** escolha um livro e capítulo ou avance e volte entre capítulos.
 - **Busca:** pesquise palavras e expressões nos textos disponíveis.
-- **Várias traduções:** selecione entre as versões incluídas no projeto.
+- **Duas versões para leitura:** PT-BR e Literal, incluindo pronúncia transliterada do texto original.
+- **Detalhes por versículo:** no Literal, o toque mostra apenas as referências; no PT-BR, mostra o literal com a pronúncia agrupada por frase e ligada por uma chave.
 - **Estudo do original:** veja o texto original e a pronúncia aproximada junto à tradução literal.
 - **PWA e leitura offline:** instale pelo navegador e acesse conteúdo em cache após carregar online.
 - **Sem servidor de aplicação:** site estático, sem banco de dados, Python ou configuração de backend.

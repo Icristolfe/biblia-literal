@@ -58,3 +58,21 @@ html,body{background:#000;color:#f1f1f1}
 }
 
 .reading-meta{display:flex;align-items:center;gap:10px}.version-label{color:#9cb8da}.chapter-count{color:#aaa}@media(max-width:600px){.reading-meta{display:block}.reading-meta .chapter-count{display:none}}
+
+/* Agrupamento da pronúncia por frase, com chave indicando o trecho relacionado. */
+.pronunciation-unit{align-items:stretch;gap:4px}
+.pronunciation-text{text-align:center}
+.pronunciation-bracket{position:relative;display:block;height:7px;margin:0 4px;border-top:1px solid #7f9fc7}
+.pronunciation-bracket::before,.pronunciation-bracket::after{position:absolute;top:-1px;height:7px;border-left:1px solid #7f9fc7;content:""}
+.pronunciation-bracket::before{left:0}.pronunciation-bracket::after{right:0}
+.detail.verse-detail{margin:8px 4px 16px;padding:15px;background:#080808;border:1px solid #263d5b;border-radius:16px;color:#eee}
+.detail-title{margin-bottom:10px;color:#9cb8da;font:700 13px system-ui,sans-serif}
+.detail-section{border-top:1px solid #282828;padding-top:12px;margin-top:12px}
+.detail-section h4{margin:0 0 10px;color:#9cb8da;font:700 11px/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.detail-interlinear{gap:8px 10px}
+.reference-list{display:flex;flex-wrap:wrap;gap:7px}
+.reference-chip{display:inline-flex;align-items:center;min-height:30px;padding:5px 10px;border:1px solid #344b68;border-radius:18px;background:#101c2b;color:#c5d8f2;font:12px/1.4 system-ui,sans-serif}
+.no-references{color:#aaa;font:13px/1.5 system-ui,sans-serif}
+@media(max-width:600px){.detail.verse-detail{margin:4px 4px 14px;padding:13px}.detail-interlinear{gap:6px 5px}.detail-interlinear .pronunciation-unit{flex-basis:95px;min-width:78px;padding:6px 4px}}
+
+.pronunciation-legend{margin:0 0 9px;color:#aaa;font:12px/1.45 system-ui,sans-serif}
