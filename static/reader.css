@@ -66,7 +66,7 @@ html,body{background:#000;color:#f1f1f1}
 .pronunciation-bracket::before,.pronunciation-bracket::after{position:absolute;top:-1px;height:7px;border-left:1px solid #7f9fc7;content:""}
 .pronunciation-bracket::before{left:0}.pronunciation-bracket::after{right:0}
 .detail.verse-detail{margin:8px 4px 16px;padding:15px;background:#080808;border:1px solid #263d5b;border-radius:16px;color:#eee}
-.detail-title{margin-bottom:10px;color:#9cb8da;font:700 13px system-ui,sans-serif}
+.detail-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.detail-title{margin:0;color:#9cb8da;font:700 13px system-ui,sans-serif}.detail-close{flex:none;width:34px;height:34px;border:1px solid #344b68;border-radius:50%;background:#17283d;color:#fff;font:22px/1 system-ui,sans-serif;cursor:pointer}.detail-close:hover{background:#203b5d}.detail-close:focus-visible{outline:2px solid #9cb8da;outline-offset:2px}
 .detail-section{border-top:1px solid #282828;padding-top:12px;margin-top:12px}
 .detail-section h4{margin:0 0 10px;color:#9cb8da;font:700 11px/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}
 .detail-interlinear{gap:8px 10px}
