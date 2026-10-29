@@ -1,4 +1,4 @@
-const CACHE_VERSION = "biblia-literal-v23";
+const CACHE_VERSION = "biblia-literal-v24";
 const SHELL = ["/", "/static/reader.css", "/static/reader.js", "/static/content/bible-data.js", "/static/manifest.webmanifest", "/favicon.ico", "/static/favicon-azul-cruz-branca.svg", "/static/icon-192.png", "/static/icon-512.png"];
 
 self.addEventListener("install", event => {
