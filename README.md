@@ -4,7 +4,7 @@ Leitor bíblico Android que funciona offline, com navegação por livro e capít
 
 ## Versões incluídas
 
-- **PT-BR**: tradução em português. Ao tocar em um versículo, o app mostra o texto literal com a pronúncia do original agrupada por frase e ligada ao trecho por uma chave visual.
+- **PT-BR**: Bíblia Portuguesa Mundial. Ao tocar em um versículo, o app mostra o texto literal e os tokens do original, um card por palavra, com transliteração e gloss lexical isolado.
 - **Literal**: tradução literal. Ao tocar em um versículo, o app mostra somente as referências cruzadas daquele versículo.
 
 Palavras auxiliares marcadas com colchetes no corpus, como `[era]`, são exibidas sem os colchetes.
@@ -25,4 +25,4 @@ Transfira `release/BibliaOffline.apk` para o Android e abra o arquivo para insta
 
 ## Conteúdo
 
-O corpus bíblico offline está em `app/src/main/assets/content/bible-data.js`. As traduções mantêm suas licenças e créditos de origem; eles também são exibidos no painel de pesquisa do aplicativo.
+O corpus bíblico offline está em `app/src/main/assets/content/bible-data.js`; os tokens lexicais são divididos por livro em `app/src/main/assets/content/tokens/` e carregados conforme necessário. As transliterações e glosses lexicais vêm dos dados TAHOT/TAGNT do [STEP Bible](https://stepbible.org/), licença CC BY 4.0. Os glosses estão em inglês e não representam um alinhamento palavra a palavra da tradução portuguesa. As traduções mantêm suas licenças e créditos de origem; eles também são exibidos no painel de pesquisa do aplicativo.
