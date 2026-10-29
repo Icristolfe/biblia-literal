@@ -75,3 +75,18 @@ html,body{background:#000;color:#f1f1f1}
 .no-references{color:#aaa;font:13px/1.5 system-ui,sans-serif}
 @media(max-width:600px){.detail.verse-detail{margin:4px 4px 14px;padding:13px}.detail-interlinear{gap:6px 5px}.detail-interlinear .pronunciation-unit{flex-basis:95px;min-width:78px;padding:6px 4px}}
 .verse-interlinear{display:block;line-height:normal}.token-study{display:block;min-width:0}.token-key{margin:2px 0 8px;color:#9cb8da;font:700 10px/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase}.token-grid{display:grid;grid-template-rows:1fr;grid-auto-flow:column;grid-auto-columns:minmax(82px,1fr);gap:7px;max-width:100%;padding:2px 1px 9px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity}.word-token{display:grid;grid-template-rows:auto auto 1fr;align-content:start;gap:5px;min-width:82px;min-height:84px;padding:8px 7px;border:1px solid #263d5b;border-radius:11px;background:#0e1723;text-align:center;scroll-snap-align:start}.token-original{color:#aebbd0;font:500 16px/1.3 system-ui,sans-serif;overflow-wrap:anywhere}.token-transliteration{color:#9cb8da;font:700 13px/1.35 system-ui,sans-serif;overflow-wrap:anywhere}.token-meaning{align-self:end;color:#d9e3ef;font:13px/1.35 system-ui,sans-serif;overflow-wrap:anywhere}.token-unavailable{color:#aabbd0;font:13px/1.5 system-ui,sans-serif}.literal-full-text{display:block;margin:10px 0 0;color:#eee;font:17px/1.55 Georgia,'Times New Roman',serif;text-align:start;direction:ltr}.detail-section .token-grid{grid-auto-columns:minmax(84px,1fr)}
+
+/* Original + pronúncia formam um único grupo alinhado à tradução do versículo. */
+.interlinear-group{display:block;width:100%;margin:3px 0 5px}
+.interlinear-source{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:flex-end;gap:8px 13px;min-width:0}
+.interlinear-word{display:inline-flex;flex-direction:column;align-items:center;gap:2px;min-width:0;direction:ltr}
+.interlinear-original{font:23px/1.35 Georgia,'Times New Roman',serif;color:#f1f1f1;unicode-bidi:plaintext;overflow-wrap:anywhere}
+.interlinear-pronunciation{font:600 12px/1.35 system-ui,sans-serif;color:#9cb8da;unicode-bidi:plaintext;overflow-wrap:anywhere}
+.interlinear-bracket{position:relative;display:block;height:10px;margin:7px 1px 5px;border-top:1px solid #6f93c0}
+.interlinear-bracket::before,.interlinear-bracket::after{position:absolute;top:-1px;height:9px;border-left:1px solid #6f93c0;content:""}
+.interlinear-bracket::before{left:0}.interlinear-bracket::after{right:0}
+.interlinear-literal{display:block;color:#f1f1f1;font:18px/1.55 Georgia,'Times New Roman',serif;text-align:start;direction:ltr;unicode-bidi:plaintext;overflow-wrap:anywhere}
+.verse-interlinear{display:block;line-height:normal}
+.verse-study .interlinear-group{margin:3px 0}
+.detail-section .interlinear-group{margin:6px 0}
+@media(max-width:600px){.interlinear-source{gap:6px 10px}.interlinear-original{font-size:20px}.interlinear-pronunciation{font-size:11px}.interlinear-literal{font-size:16px;line-height:1.5}}
