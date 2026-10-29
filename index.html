@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102b24">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Leia e estude a Bíblia Literal em qualquer dispositivo.">
+  <title>Bíblia Literal — leitura e estudo</title>
+  <link rel="manifest" href="/static/manifest.webmanifest">
+  <link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/reader.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Bíblia Literal, início"><span class="brand-icon" aria-hidden="true">✦</span><span>Bíblia <b>Literal</b><small>LEITURA · ESTUDO · PALAVRA</small></span></a>
+    <button class="about-button" id="aboutButton" type="button">Sobre</button>
+  </header>
+  <main class="shell">
+    <section class="intro"><p class="eyebrow">A PALAVRA, DE PERTO</p><h1>Leia com atenção.<br><em>Viva com propósito.</em></h1><p class="lead">Um espaço simples para leitura e estudo das Escrituras, em qualquer tela.</p></section>
+    <section class="reader" aria-label="Leitor bíblico">
+      <div class="controls"><label>Tradução<select id="versionSelect" aria-label="Tradução"></select></label><button class="passage" id="passageButton" type="button" aria-label="Escolher livro e capítulo"><span id="passageLabel">Carregando…</span><span aria-hidden="true">⌄</span></button></div>
+      <div class="reader-tools"><button id="prev" type="button" aria-label="Capítulo anterior">←</button><span id="chapterLabel"></span><button id="next" type="button" aria-label="Próximo capítulo">→</button><button class="search-button" id="searchButton" type="button">⌕ <span>Buscar</span></button></div>
+      <div id="readerContent" aria-live="polite"><div class="loading">Preparando a leitura…</div></div>
+      <p class="credits">Textos e créditos das traduções disponíveis no projeto.</p>
+    </section>
+  </main>
+  <nav class="mobile-nav" aria-label="Navegação"><button class="active" type="button" data-action="read"><span>⌂</span>Leitura</button><button type="button" data-action="search"><span>⌕</span>Buscar</button><button type="button" data-action="passage"><span>☷</span>Livro</button></nav>
+  <dialog id="pickerDialog" class="dialog"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">NAVEGAR</p><h2>Escolha uma passagem</h2></div><button class="close" aria-label="Fechar">×</button></div><label class="filter-label">Filtrar livros<input id="bookFilter" type="search" placeholder="Ex.: João"></label><div id="bookPicker" class="book-picker"></div><div class="chapter-picker"><h3 id="pickerBookName">Capítulo</h3><div id="chapterGrid" class="chapter-grid"></div></div></form></dialog>
+  <dialog id="searchDialog" class="dialog"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">PESQUISA</p><h2>Encontre um trecho</h2></div><button class="close" aria-label="Fechar">×</button></div><label class="filter-label">Palavra ou expressão<input id="searchInput" type="search" placeholder="Digite para pesquisar"></label><p id="searchHint" class="hint">A busca acontece no texto disponível neste projeto.</p><div id="searchResults" class="search-results"></div></form></dialog>
+  <dialog id="aboutDialog" class="dialog about"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">BÍBLIA LITERAL</p><h2>Leitura para todos os dias</h2></div><button class="close" aria-label="Fechar">×</button></div><p>Uma experiência de leitura feita para celular, tablet e computador. O conteúdo disponível depende das traduções incluídas no projeto.</p><p class="hint">Para publicar gratuitamente no Netlify, configure <code>web</code> como diretório base; o build gera a pasta <code>dist</code>. O Django serve a mesma interface quando executado em um servidor Python.</p></form></dialog>
+  <script src="/static/content/bible-data.js"></script>
+  <script src="/static/reader.js"></script>
+</body>
+</html>
