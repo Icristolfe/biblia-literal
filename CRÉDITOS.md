@@ -6,4 +6,4 @@
 
 As duas traduções usadas pelo aplicativo estão incluídas em `static/content/bible-data.js` e funcionam offline, sem chamadas a APIs. Os tokens lexicais são fornecidos por arquivos locais separados por livro.
 
-O pacote OWB identifica seu texto literal como rascunho assistido por IA pendente de revisão humana. O alinhamento entre esses trechos em português e os tokens STEP é automático e não revisado; não deve ser tratado como análise linguística validada. Gênesis 1:1 segue o exemplo de grupos fornecido pelo usuário. Quando não há texto ou token fonte, o aplicativo não inventa uma tradução ou pronúncia.
+O pacote OWB identifica seu texto literal como rascunho assistido por IA pendente de revisão humana ([status de revisão](https://openwordbible.org/about/status/)). O alinhamento entre esses trechos em português e os tokens STEP é automático e não revisado; os testes garantem consistência estrutural e textual, não validação linguística humana. Gênesis 1:1 segue a ordem de leitura em português e mantém cada pronúncia vinculada ao token-fonte correspondente. Quando não há texto ou token fonte, o aplicativo não inventa uma tradução ou pronúncia.
