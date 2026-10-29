@@ -24,7 +24,7 @@ No estudo interlinear, cada palavra ou grupo de palavras do original é ligado a
 - **Navegação bíblica:** escolha um livro e capítulo ou avance e volte entre capítulos.
 - **Busca:** pesquise palavras e expressões nos textos disponíveis.
 - **Versões para leitura:** PT-BR (Bíblia Portuguesa Mundial) e Literal; ambas incluídas no projeto para leitura offline, sem API.
-- **Detalhes por versículo:** no Literal, o toque mostra apenas as referências; no PT-BR, mostra o texto original e a pronúncia agrupados acima da tradução literal.
+- **Detalhes por versículo:** no Literal, o toque mostra apenas as referências; no PT-BR, mostra a pronúncia romanizada agrupada acima da tradução literal.
 - **Estudo do original:** leitura interlinear em grupos alinhados por versículo, com direção RTL no hebraico e LTR no grego.
 - **PWA e leitura offline:** instale pelo navegador. Os textos acompanham o projeto; os tokens interlineares são carregados por livro e guardados em cache para leitura offline.
 - **Sem servidor de aplicação:** site estático, sem banco de dados, Python ou configuração de backend.
@@ -69,7 +69,7 @@ netlify-app/
 
 ## Conteúdo e licenças
 
-As traduções têm fontes e licenças diferentes. Consulte [CRÉDITOS.md](CRÉDITOS.md) antes de redistribuir ou adaptar o conteúdo. A pronúncia e o agrupamento visual são recursos de estudo, não uma análise linguística palavra a palavra.
+As traduções têm fontes e licenças diferentes. Consulte [CRÉDITOS.md](CRÉDITOS.md) antes de redistribuir ou adaptar o conteúdo. A pronúncia vem dos dados TAHOT/TAGNT do STEP Bible. O agrupamento português é automático e não revisado; consulte os créditos e as limitações do conjunto de dados.
 
 O app web não faz chamadas a APIs de traduções. A PT-BR é a Bíblia Portuguesa Mundial, e a Literal vem da Open Word Bible; ambas estão incluídas localmente. Os tokens lexicais STEPBible são carregados por livro a partir dos próprios arquivos estáticos do projeto.
 
