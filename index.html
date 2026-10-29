@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#102b24">
+  <meta name="theme-color" content="#072246">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="description" content="Leia e estude a Bíblia Literal em qualquer dispositivo.">
@@ -27,8 +27,8 @@
       <p class="credits">Textos e créditos das traduções disponíveis no projeto.</p>
     </section>
   </main>
-  <nav class="mobile-nav" aria-label="Navegação"><button class="active" type="button" data-action="read"><span>⌂</span>Leitura</button><button type="button" data-action="search"><span>⌕</span>Buscar</button><button type="button" data-action="passage"><span>☷</span>Livro</button></nav>
-  <dialog id="pickerDialog" class="dialog"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">NAVEGAR</p><h2>Escolha uma passagem</h2></div><button class="close" aria-label="Fechar">×</button></div><label class="filter-label">Filtrar livros<input id="bookFilter" type="search" placeholder="Ex.: João"></label><div id="bookPicker" class="book-picker"></div><div class="chapter-picker"><h3 id="pickerBookName">Capítulo</h3><div id="chapterGrid" class="chapter-grid"></div></div></form></dialog>
+  <nav class="mobile-nav reader-footer" aria-label="Navegação entre capítulos"><button type="button" data-action="prev" aria-label="Capítulo anterior">‹ Anterior</button><button type="button" data-action="next" aria-label="Próximo capítulo">Próximo ›</button></nav>
+  <dialog id="pickerDialog" class="dialog"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">NAVEGAR</p><h2>Escolha uma passagem</h2></div><button class="close" aria-label="Fechar">×</button></div><label class="filter-label">Versão bíblica<select id="mobileVersionSelect" aria-label="Versão bíblica"></select></label><button class="picker-search-button" id="pickerSearchButton" type="button">⌕ Pesquisar na Bíblia</button><label class="filter-label">Filtrar livros<input id="bookFilter" type="search" placeholder="Ex.: João"></label><div id="bookPicker" class="book-picker"></div><div class="chapter-picker"><h3 id="pickerBookName">Capítulo</h3><div id="chapterGrid" class="chapter-grid"></div></div></form></dialog>
   <dialog id="searchDialog" class="dialog"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">PESQUISA</p><h2>Encontre um trecho</h2></div><button class="close" aria-label="Fechar">×</button></div><label class="filter-label">Palavra ou expressão<input id="searchInput" type="search" placeholder="Digite para pesquisar"></label><p id="searchHint" class="hint">A busca acontece no texto disponível neste projeto.</p><div id="searchResults" class="search-results"></div></form></dialog>
   <dialog id="aboutDialog" class="dialog about"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">BÍBLIA LITERAL</p><h2>Leitura para todos os dias</h2></div><button class="close" aria-label="Fechar">×</button></div><p>Uma experiência de leitura feita para celular, tablet e computador. O conteúdo disponível depende das traduções incluídas no projeto.</p><p class="hint">Este é um site estático independente. No Netlify, publique a raiz do repositório sem comando de build. Depois do primeiro carregamento online, o site tenta manter a leitura disponível offline.</p></form></dialog>
   <script src="/static/content/bible-data.js"></script>

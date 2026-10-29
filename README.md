@@ -14,7 +14,7 @@
 
 ## Sobre o projeto
 
-A **Bíblia Literal** é um leitor bíblico independente, feito para facilitar a leitura em diferentes telas. A interface é simples e responsiva, e pode ser instalada como aplicativo pelo navegador. Depois do primeiro carregamento online, o site tenta manter o conteúdo disponível para leitura offline.
+A **Bíblia Literal** é um leitor bíblico independente, feito para facilitar a leitura em diferentes telas. Ele abre em **Gênesis 1**, na versão **PT-BR**. No celular, segue o visual do app Android: fundo preto, detalhes em azul `#072246`, navegação compacta e controles de capítulo fixos na parte inferior. A interface adapta-se a tablets e computadores e pode ser instalada como aplicativo pelo navegador. Depois do primeiro carregamento online, o site tenta manter o conteúdo disponível para leitura offline.
 
 Na tradução literal, a pronúncia aproximada do texto original aparece agrupada acima das frases correspondentes em português. O agrupamento ajuda a acompanhar a leitura; como o corpus não traz alinhamento palavra a palavra, a correspondência é aproximada.
 
