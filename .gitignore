@@ -1,0 +1,8 @@
+.gradle/
+**/build/
+local.properties
+*.apk
+!/release/BibliaOffline.apk
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
