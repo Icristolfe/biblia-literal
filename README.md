@@ -16,7 +16,7 @@
 
 A **Bíblia Literal** é um leitor bíblico independente, feito para facilitar a leitura em diferentes telas. Ele abre em **Gênesis 1**, na versão **PT-BR**. No celular, segue o visual do app Android: fundo preto, detalhes em azul `#072246`, navegação compacta e controles de capítulo fixos na parte inferior. A interface adapta-se a tablets e computadores e pode ser instalada como aplicativo pelo navegador. Depois do primeiro carregamento online, o site tenta manter o conteúdo disponível para leitura offline.
 
-No estudo interlinear, o texto original e sua transliteração aparecem juntos acima da tradução literal em português. Cada versículo é apresentado como um grupo, porque o conteúdo disponível alinha a tradução literal ao versículo inteiro e não fornece correspondências confiáveis por palavra ou frase.
+No estudo interlinear, cada trecho da tradução literal recebe um grupo de pronúncia acima, ligado por uma chave visual. As palavras pronunciadas são distribuídas na ordem do texto original e aparecem uma única vez.
 
 ## O que você encontra
 

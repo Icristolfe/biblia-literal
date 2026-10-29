@@ -90,3 +90,24 @@ html,body{background:#000;color:#f1f1f1}
 .verse-study .interlinear-group{margin:3px 0}
 .detail-section .interlinear-group{margin:6px 0}
 @media(max-width:600px){.interlinear-source{gap:6px 10px}.interlinear-original{font-size:20px}.interlinear-pronunciation{font-size:11px}.interlinear-literal{font-size:16px;line-height:1.5}}
+
+/* Chaves por frase: cada palavra pronunciada entra uma única vez no grupo. */
+.verse-interlinear{display:flex;flex-wrap:wrap;align-items:flex-start;gap:9px 7px;margin-top:3px}
+.pronunciation-unit{display:inline-flex;flex:1 1 92px;min-width:78px;max-width:100%;flex-direction:column;align-items:stretch;gap:4px;padding:2px 3px;border:0;border-radius:0;background:transparent;text-align:center;vertical-align:top}
+.pronunciation-text{color:#9cb8da;font:600 11px/1.4 system-ui,sans-serif;text-align:center;direction:ltr;overflow-wrap:anywhere}
+.pronunciation-bracket{position:relative;display:block;height:8px;margin:1px 3px 0;border-top:1px solid #6f93c0}
+.pronunciation-bracket::before,.pronunciation-bracket::after{position:absolute;top:-1px;height:7px;border-left:1px solid #6f93c0;content:""}
+.pronunciation-bracket::before{left:0}.pronunciation-bracket::after{right:0}
+.literal-phrase{color:#f1f1f1;font:17px/1.45 Georgia,'Times New Roman',serif;text-align:center;direction:ltr;overflow-wrap:anywhere}
+@media(max-width:600px){.verse-interlinear{gap:7px 4px}.pronunciation-unit{flex-basis:90px;min-width:72px;padding:2px}.pronunciation-text{font-size:10px}.literal-phrase{font-size:16px;line-height:1.4}}
+
+/* A pronúncia sai uma vez e cada chave cobre a frase literal correspondente. */
+.verse-interlinear{display:flex;flex-wrap:wrap;align-items:flex-start;gap:9px 7px;margin-top:3px}
+.verse-interlinear .verse-interlinear{display:contents}
+.pronunciation-unit{display:inline-flex;flex:1 1 92px;min-width:78px;max-width:100%;flex-direction:column;align-items:stretch;gap:4px;padding:2px 3px;border:0;border-radius:0;background:transparent;text-align:center;vertical-align:top}
+.pronunciation-text{color:#9cb8da;font:600 11px/1.4 system-ui,sans-serif;text-align:center;direction:ltr;overflow-wrap:anywhere}
+.pronunciation-bracket{position:relative;display:block;height:8px;margin:1px 3px 0;border-top:1px solid #6f93c0}
+.pronunciation-bracket::before,.pronunciation-bracket::after{position:absolute;top:-1px;height:7px;border-left:1px solid #6f93c0;content:""}
+.pronunciation-bracket::before{left:0}.pronunciation-bracket::after{right:0}
+.literal-phrase{color:#f1f1f1;font:17px/1.45 Georgia,'Times New Roman',serif;text-align:center;direction:ltr;overflow-wrap:anywhere}
+@media(max-width:600px){.verse-interlinear{gap:7px 4px}.pronunciation-unit{flex-basis:90px;min-width:72px;padding:2px}.pronunciation-text{font-size:10px}.literal-phrase{font-size:16px;line-height:1.4}}
