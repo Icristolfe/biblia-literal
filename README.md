@@ -24,7 +24,7 @@ No estudo interlinear, cada palavra ou grupo de palavras do original é ligado a
 - **Navegação bíblica:** escolha um livro e capítulo ou avance e volte entre capítulos.
 - **Busca:** pesquise palavras e expressões nos textos disponíveis.
 - **Versões para leitura:** PT-BR (Bíblia Portuguesa Mundial) e Literal; ambas incluídas no projeto para leitura offline, sem API.
-- **Detalhes por versículo:** no Literal, o toque mostra apenas as referências; no PT-BR, o estudo exibe primeiro o texto literal canônico, derivado da concatenação dos grupos, seguido da pronúncia romanizada e do chaveamento.
+- **Detalhes por versículo:** na versão Literal, a leitura mostra somente o texto. Ao tocar no versículo, aparecem as chaves interlineares e as referências. No PT-BR, o toque abre o estudo do versículo com o texto literal canônico, pronúncia romanizada e chaveamento.
 - **Estudo do original:** leitura interlinear em grupos alinhados por versículo, sempre da esquerda para a direita, como a leitura em português.
 - **PWA e leitura offline:** instale pelo navegador. Os textos acompanham o projeto; os tokens interlineares são carregados por livro e guardados em cache para leitura offline.
 - **Sem servidor de aplicação:** site estático, sem banco de dados, Python ou configuração de backend.
