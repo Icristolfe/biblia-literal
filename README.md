@@ -16,17 +16,17 @@
 
 A **Bíblia Literal** é um leitor bíblico independente, feito para facilitar a leitura em diferentes telas. Ele abre em **Gênesis 1**, na versão **PT-BR**. No celular, segue o visual do app Android: fundo preto, detalhes em azul `#072246`, navegação compacta e controles de capítulo fixos na parte inferior. A interface adapta-se a tablets e computadores e pode ser instalada como aplicativo pelo navegador. Depois do primeiro carregamento online, o site tenta manter o conteúdo disponível para leitura offline.
 
-Na tradução literal, a pronúncia aproximada do texto original aparece agrupada acima das frases correspondentes em português. O agrupamento ajuda a acompanhar a leitura; como o corpus não traz alinhamento palavra a palavra, a correspondência é aproximada.
+No estudo interlinear, cada card corresponde a uma palavra do original e traz sua própria transliteração e gloss lexical STEP. Os glosses STEP estão em inglês; a tradução literal portuguesa aparece separada, sem alinhamentos aproximados inventados entre as duas fontes.
 
 ## O que você encontra
 
 - **Leitura responsiva:** experiência adaptada para celular, tablet e computador.
 - **Navegação bíblica:** escolha um livro e capítulo ou avance e volte entre capítulos.
 - **Busca:** pesquise palavras e expressões nos textos disponíveis.
-- **Versões para leitura:** Bíblia Portuguesa Mundial principal, Literal e duas alternativas completas em português carregadas da Free Use Bible API.
-- **Detalhes por versículo:** no Literal, o toque mostra apenas as referências; no PT-BR, mostra o literal com a pronúncia agrupada por frase e ligada por uma chave.
-- **Estudo do original:** veja o texto original e a pronúncia aproximada junto à tradução literal.
-- **PWA e leitura offline:** instale pelo navegador. A tradução online completa selecionada é baixada uma vez e guardada no dispositivo; a navegação por capítulos usa o conteúdo local.
+- **Versões para leitura:** PT-BR (Bíblia Portuguesa Mundial) e Literal; ambas incluídas no projeto para leitura offline, sem API.
+- **Detalhes por versículo:** no Literal, o toque mostra apenas as referências; no PT-BR, mostra os tokens do original, um card por palavra, e o texto literal em uma área separada.
+- **Estudo do original:** transliteração e gloss lexical individual de cada token hebraico ou grego. Os glosses disponíveis estão em inglês.
+- **PWA e leitura offline:** instale pelo navegador. Os textos acompanham o projeto; os tokens interlineares são carregados por livro e guardados em cache para leitura offline.
 - **Sem servidor de aplicação:** site estático, sem banco de dados, Python ou configuração de backend.
 
 ## Publicar no Netlify
@@ -59,7 +59,8 @@ netlify-app/
 ├── netlify.toml                # configuração de publicação
 ├── service-worker.js           # cache para uso offline
 └── static/
-    ├── content/bible-data.js   # textos bíblicos incluídos (~31 MB)
+    ├── content/bible-data.js   # textos bíblicos incluídos
+    ├── content/tokens/         # tokens lexicais separados por livro, carregados sob demanda
     ├── reader.css              # estilos responsivos
     ├── reader.js               # navegação, busca e leitura
     ├── icon.svg                # ícone do site
@@ -70,7 +71,7 @@ netlify-app/
 
 As traduções têm fontes e licenças diferentes. Consulte [CRÉDITOS.md](CRÉDITOS.md) antes de redistribuir ou adaptar o conteúdo. A pronúncia e o agrupamento visual são recursos de estudo, não uma análise linguística palavra a palavra.
 
-As duas opções online completas são Bíblia Livre e Biblica Open Nova Bíblia Viva; a Bíblia Portuguesa Mundial principal já está incluída no projeto. A integração usa a [Free Use Bible API](https://bible.helloao.org/docs/pt/), sem chave e sem limite de uso publicado. A NVI não está incluída nessa API; seu uso exige acesso e autorização da detentora dos direitos.
+O app web não faz chamadas a APIs de traduções. A PT-BR é a Bíblia Portuguesa Mundial, e a Literal vem da Open Word Bible; ambas estão incluídas localmente. Os tokens lexicais STEPBible são carregados por livro a partir dos próprios arquivos estáticos do projeto.
 
 ---
 

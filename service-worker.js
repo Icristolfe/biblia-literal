@@ -1,5 +1,5 @@
-const CACHE_VERSION = "biblia-literal-v8";
-const SHELL = ["/", "/static/reader.css", "/static/reader.js", "/static/manifest.webmanifest", "/static/icon-072246.svg"];
+const CACHE_VERSION = "biblia-literal-v12";
+const SHELL = ["/", "/static/reader.css", "/static/reader.js", "/static/manifest.webmanifest", "/static/icon-cross-072246.svg"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_VERSION).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -23,7 +23,7 @@ self.addEventListener("fetch", event => {
     return;
   }
 
-  if (url.pathname === "/static/content/bible-data.js" || SHELL.includes(url.pathname)) {
+  if (url.pathname === "/static/content/bible-data.js" || url.pathname.startsWith("/static/content/tokens/") || SHELL.includes(url.pathname)) {
     event.respondWith(caches.match(request).then(cached => {
       if (cached) return cached;
       return fetch(request).then(response => {
