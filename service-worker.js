@@ -1,5 +1,5 @@
-const CACHE_VERSION = "biblia-literal-v13";
-const SHELL = ["/", "/static/reader.css", "/static/reader.js", "/static/manifest.webmanifest", "/static/icon-cross-072246.svg"];
+const CACHE_VERSION = "biblia-literal-v15";
+const SHELL = ["/", "/static/reader.css", "/static/reader.js", "/static/manifest.webmanifest", "/static/favicon-bible-blue-cross.svg", "/static/icon-192.png", "/static/icon-512.png"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_VERSION).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
