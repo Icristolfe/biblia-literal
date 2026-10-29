@@ -10,3 +10,8 @@
   for = "/service-worker.js"
   [headers.values]
     Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "script-src 'self'"
