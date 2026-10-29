@@ -23,10 +23,10 @@ Na tradução literal, a pronúncia aproximada do texto original aparece agrupad
 - **Leitura responsiva:** experiência adaptada para celular, tablet e computador.
 - **Navegação bíblica:** escolha um livro e capítulo ou avance e volte entre capítulos.
 - **Busca:** pesquise palavras e expressões nos textos disponíveis.
-- **Duas versões para leitura:** PT-BR e Literal, incluindo pronúncia transliterada do texto original.
+- **Versões para leitura:** Bíblia Portuguesa Mundial principal, Literal e duas alternativas completas em português carregadas da Free Use Bible API.
 - **Detalhes por versículo:** no Literal, o toque mostra apenas as referências; no PT-BR, mostra o literal com a pronúncia agrupada por frase e ligada por uma chave.
 - **Estudo do original:** veja o texto original e a pronúncia aproximada junto à tradução literal.
-- **PWA e leitura offline:** instale pelo navegador e acesse conteúdo em cache após carregar online.
+- **PWA e leitura offline:** instale pelo navegador. A tradução online completa selecionada é baixada uma vez e guardada no dispositivo; a navegação por capítulos usa o conteúdo local.
 - **Sem servidor de aplicação:** site estático, sem banco de dados, Python ou configuração de backend.
 
 ## Publicar no Netlify
@@ -69,6 +69,8 @@ netlify-app/
 ## Conteúdo e licenças
 
 As traduções têm fontes e licenças diferentes. Consulte [CRÉDITOS.md](CRÉDITOS.md) antes de redistribuir ou adaptar o conteúdo. A pronúncia e o agrupamento visual são recursos de estudo, não uma análise linguística palavra a palavra.
+
+As duas opções online completas são Bíblia Livre e Biblica Open Nova Bíblia Viva; a Bíblia Portuguesa Mundial principal já está incluída no projeto. A integração usa a [Free Use Bible API](https://bible.helloao.org/docs/pt/), sem chave e sem limite de uso publicado. A NVI não está incluída nessa API; seu uso exige acesso e autorização da detentora dos direitos.
 
 ---
 
